@@ -1,13 +1,8 @@
 import type { App } from 'vue'
 import { createI18n } from 'vue-i18n'
 import enUS from './en-US'
-import esES from './es-ES'
 import koKR from './ko-KR'
 import frFR from './fr-FR'
-import ruRU from './ru-RU'
-import viVN from './vi-VN'
-import zhCN from './zh-CN'
-import zhTW from './zh-TW'
 import { useAppStoreWithOut } from '@/store/modules/app'
 import type { Language } from '@/store/modules/app/helper'
 
