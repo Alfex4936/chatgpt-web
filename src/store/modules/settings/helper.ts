@@ -9,11 +9,13 @@ export interface SettingsState {
 }
 
 export function defaultSetting(): SettingsState {
+  const currentDate = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
+  
   return {
-    systemMessage: 'You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture. Knowledge cutoff: 2023-10 Current date: 2024-05-15. Follow the user\'s instructions carefully. Respond using markdown.',
+    systemMessage: `You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture. Knowledge cutoff: 2023-10. Current date: ${currentDate}. Follow the user's instructions carefully. Respond using markdown.`,
     temperature: 0.9,
     top_p: 1,
-  }
+  };
 }
 
 export function getLocalState(): SettingsState {
